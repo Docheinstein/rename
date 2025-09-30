@@ -15,8 +15,6 @@ rename foo-(\d+).txt bar-$1.txt
 
 ### Build
 
-###
-
 ```
 mkdir build
 cd build
