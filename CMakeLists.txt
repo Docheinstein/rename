@@ -9,6 +9,4 @@ endif()
 
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
-add_executable(rename main.cpp)
-
-install(TARGETS rename RUNTIME DESTINATION bin)
+add_subdirectory(src)
