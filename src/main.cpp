@@ -17,8 +17,6 @@ const char* argp_doc = "\n"
                        "  rename txt txt.old .\n"
                        "  rename file_(\\d+).txt File_$1.txt /path/to/directory\n";
 
-const char* argp_program_version = "1.0";
-
 constexpr char OPTION_DRY_RUN = 'n';
 constexpr char OPTION_RECURSIVE = 'r';
 constexpr char OPTION_QUIET = 'q';
@@ -154,6 +152,8 @@ void rename(const arguments& arguments) {
     }
 }
 } // namespace
+
+const char* argp_program_version = "1.0";
 
 int main(int argc, char* argv[]) {
     const argp argp {argp_options, parse_option, argp_args_doc, argp_doc};
