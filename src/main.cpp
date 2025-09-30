@@ -89,7 +89,11 @@ void rename(const arguments& arguments) {
 
     std::filesystem::path path;
     try {
-        path = arguments.path;
+        if (arguments.path) {
+            path = arguments.path;
+        } else {
+            path = std::filesystem::current_path();
+        }
     } catch (const std::filesystem::filesystem_error& e) {
         std::cerr << error_prefix << e.what() << std::endl;
         exit(EXIT_FAILURE);
