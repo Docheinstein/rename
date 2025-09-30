@@ -8,5 +8,6 @@ if (CMAKE_BUILD_TYPE STREQUAL "")
 endif()
 
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
+message(STATUS "Install directory: ${CMAKE_INSTALL_BINDIR}")
 
 add_subdirectory(src)
