@@ -29,3 +29,9 @@ make
 ```
 sudo make install
 ```
+
+The `CMAKE_INSTALL_BINDIR` option can be used to install in a non-default path.
+
+```
+cmake .. -DCMAKE_INSTALL_BINDIR=/usr/local/bin
+```
